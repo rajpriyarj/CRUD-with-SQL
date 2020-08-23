@@ -1,0 +1,26 @@
+[
+  {
+    "name": "me",
+    "description": "xyz",
+    "enrolledStudents": [
+      {
+        "id": 2,
+        "name": "IRON MAN"
+      }
+    ],
+    "availableSlots": 2,
+    "id": 1
+  },
+  {
+    "name": "IT",
+    "description": "xyz",
+    "enrolledStudents": [
+      {
+        "id": 3,
+        "name": "Avengers"
+      }
+    ],
+    "availableSlots": 8,
+    "id": 2
+  }
+]
