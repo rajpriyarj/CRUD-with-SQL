@@ -9,8 +9,7 @@ const {checkToken} = require('./../middlewares/index');
 
 
 router.get('/', async (req, res)=>{
-    let query = 'SELECT * FROM students';
-    let [err, result] = await to(mysql.executeQuery(query));
+    let [err, result] = await to(mysql.executeQuery('SELECT * FROM students'));
     if (err){
         return res.json({
             data: null,
@@ -24,8 +23,8 @@ router.get('/', async (req, res)=>{
 })
 
 router.get('/:id', checkToken, async (req, res)=>{
-    studentId = req.params.id;
-    let [err, result] = await to(mysql.executeQuery(`SELECT * FROM students where id = ${req.params.id}`));
+    let studentId = req.params.id;
+    let [err, result] = await to(mysql.executeQuery(`SELECT * FROM students where id = ${studentId}`));
     if (err){
         return res.json({
             data: null,

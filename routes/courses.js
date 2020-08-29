@@ -13,6 +13,7 @@ router.get('/', async (req,res)=>{
             error: "Error!!!"
         });
     }
+    console.log(shit)
     res.json({
         data: result,
         error: null
